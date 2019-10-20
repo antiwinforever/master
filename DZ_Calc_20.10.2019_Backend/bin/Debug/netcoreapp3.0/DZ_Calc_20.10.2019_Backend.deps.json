@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.0": {
+      "DZ_Calc_20.10.2019_Backend/1.0.0": {
+        "runtime": {
+          "DZ_Calc_20.10.2019_Backend.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DZ_Calc_20.10.2019_Backend/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
