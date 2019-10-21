@@ -35,31 +35,28 @@ namespace DZ_Calc_20._10._2019_Backend
                 //Console.Read();
 
 
-                if (Key == 1)
+                
+                switch (Key)
                 {
-                    Console.WriteLine("Сложение:\n{1}+{2}={0}", One + Two, One, Two);
-                }
-                else
-                {
-                    if (Key == 2)
-                    {
+                    case 1:
+                        Console.WriteLine("Сложение:\n{1}+{2}={0}", One + Two, One, Two);
+                        break;
+                    case 2:
                         Console.WriteLine("Вычитание:\n{1}-{2}={0}", One - Two, One, Two);
-                    }
-                    else
-                    {
-                        if (Key == 3)
-                        {
-                            Console.WriteLine("Умножение:\n{1}*{2}={0}", One * Two, One, Two);
-                        }
-                        else
-                        {
-                            if (Key == 4)
-                            {
-                                Console.WriteLine("Деление:\n{1}/{2}={0}", One / Two, One, Two);
-                            }  
-                        }
-                    }
+                        break;
+                    case 3:
+                        Console.WriteLine("Умножение:\n{1}*{2}={0}", One * Two, One, Two);
+                        break;
+                    case 4:
+                        Console.WriteLine("Деление:\n{1}/{2}={0}", One / Two, One, Two);
+                        break;
+                    default:
+                        break;
                 }
+
+
+
+
                 Console.WriteLine("\nДля продолжения нажмите любую клавишу...");
                 Console.ReadKey();
                 Console.Clear();

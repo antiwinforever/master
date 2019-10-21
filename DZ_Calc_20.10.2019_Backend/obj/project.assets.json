@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MorgaN\\Desktop\\C#\\DZ\\20.10.2019 - Calc\\DZ_Calc_20.10.2019_Backend\\DZ_Calc_20.10.2019_Backend.csproj",
+      "projectUniqueName": "C:\\Users\\MorgaN\\Desktop\\rep\\DZ_Calc_20.10.2019_Backend\\DZ_Calc_20.10.2019_Backend.csproj",
       "projectName": "DZ_Calc_20.10.2019_Backend",
-      "projectPath": "C:\\Users\\MorgaN\\Desktop\\C#\\DZ\\20.10.2019 - Calc\\DZ_Calc_20.10.2019_Backend\\DZ_Calc_20.10.2019_Backend.csproj",
+      "projectPath": "C:\\Users\\MorgaN\\Desktop\\rep\\DZ_Calc_20.10.2019_Backend\\DZ_Calc_20.10.2019_Backend.csproj",
       "packagesPath": "C:\\Users\\MorgaN\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MorgaN\\Desktop\\C#\\DZ\\20.10.2019 - Calc\\DZ_Calc_20.10.2019_Backend\\obj\\",
+      "outputPath": "C:\\Users\\MorgaN\\Desktop\\rep\\DZ_Calc_20.10.2019_Backend\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
