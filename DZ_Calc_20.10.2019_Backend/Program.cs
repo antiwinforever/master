@@ -1,15 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace DZ_Calc_20._10._2019_Backend
 {
     class Program
     {
+        static List<string> history = new List<string>();
+
+        static void HisAd(string Text)
+        {
+            history.Add(Text);
+            Console.WriteLine(Text);
+        }
+
         static void Main(string[] args)
         {
+            
+            //Console.WriteLine(Data[0]);
+            //Data.RemoveAt(0);
+            //Console.WriteLine(Data.Count);
+
             int One = 0, Two = 0, Key = 0;
-            Console.WriteLine("DPV.Soft_Calc_1.0.1");
-            string[] history = new string[5];
-            int i = 0;
+            Console.WriteLine("DPV.Soft_Calc_1.0.5");
+            
+            
             Console.WriteLine("Для продолжения нажмите любую клавишу...");
             Console.ReadKey();
             Console.Clear();
@@ -25,7 +39,7 @@ namespace DZ_Calc_20._10._2019_Backend
                 Console.Clear();
                 if (Key == 5)
                 {
-                    Console.WriteLine("\nСпасибо досвидания... Нажмите любую клавишу...");
+                    Console.WriteLine("\nСпаCибо До СвИдАнИя... Нажмите любую клавишу...");
                     Console.ReadKey();
                     break;
                 }
@@ -38,29 +52,20 @@ namespace DZ_Calc_20._10._2019_Backend
                     Two = Convert.ToInt32(Console.ReadLine());
                     Console.Clear();
                 }
-                
-                
-               
 
-                if (i > 4) i = 0;
-                
                 switch (Key)
                 {
                     case 1:
-                        history[i] = "Сложение:\n" + One + "+" + Two + "=" + (One + Two);
-                        Console.WriteLine(history[i]);
+                        HisAd("Сложение:\n" + One + "+" + Two + "=" + (One + Two));
                         break;
                     case 2:
-                        history[i] = "Вычитание:\n" + One + "-" + Two + "=" + (One - Two);
-                        Console.WriteLine(history[i]);
+                        HisAd("Вычитание:\n" + One + "-" + Two + "=" + (One - Two));
                         break;
                     case 3:
-                        history[i] = "Умножение:\n" + One + "*" + Two + "=" + (One * Two);
-                        Console.WriteLine(history[i]);
+                        HisAd("Умножение:\n" + One + "*" + Two + "=" + (One * Two));
                         break;
                     case 4:
-                        history[i] = "Деление:\n" + One + "/" + Two + "=" + (One / Two);
-                        Console.WriteLine(history[i]);
+                        HisAd("Деление:\n" + One + "/" + Two + "=" + (One / Two));
                         break;
                     case 6:
                         Console.WriteLine("История:");
@@ -73,7 +78,7 @@ namespace DZ_Calc_20._10._2019_Backend
                         break;
                 }
 
-                i++;
+                
 
 
                 Console.WriteLine("\nДля продолжения нажмите любую клавишу...");
