@@ -10,6 +10,7 @@ namespace TcpListenerApp
         const int port = 8888; // порт для прослушивания подключений
         static void Main(string[] args)
         {
+            
             TcpListener server = null;
             try
             {
