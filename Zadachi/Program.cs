@@ -16,6 +16,7 @@ namespace Zadachi
     public class Worcks
     {
         public int Id { get; set; }
+        public int IdUser { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public string Tag { get; set; }
@@ -77,8 +78,17 @@ namespace Zadachi
 
         static string MenuUsers(string LoginName)
         {
+            int ID = 0;
             Console.WriteLine("Привет: " + LoginName);
-
+            using (ApplicationContext context = new ApplicationContext())
+            {
+                var testUser = context.Users.FirstOrDefault(b => b.Name == LoginName);
+                var ArrId = context.Users.ToList();
+                foreach (User u in ArrId)
+                {
+                    ID = u.Id;
+                }
+            }
             while (true)
             {
                 
@@ -89,7 +99,7 @@ namespace Zadachi
                 switch (MenuID)
                 {
                     case "1":
-                        QuestionADD();
+                        QuestionADD(ID);
                         break;
                     case "0":
                         break;
@@ -106,13 +116,14 @@ namespace Zadachi
             return "0";
         }
 
-        static string QuestionADD()
+        static string QuestionADD(int IdLogin)
         {
             Random rnd = new Random();
             using (ApplicationContext context = new ApplicationContext())
             {
                 DateTime DateNow = DateTime.Now;
-                context.Questions.Add(new Worcks { Name = "", Description = "", Tag = "#" + rnd.Next() , CreationDate = DateNow, Date = DateTime.Now }) ;
+                
+                context.Questions.Add(new Worcks { IdUser = IdLogin, Name = "", Description = "", Tag = "#" + rnd.Next() , CreationDate = DateNow, Date = DateTime.Now }) ;
                 context.SaveChanges();
 
                 Console.WriteLine("Задача добавлена!");
@@ -200,6 +211,7 @@ namespace Zadachi
                     var testUser = context.Users.FirstOrDefault(b => b.Name == TempLogin & b.Password == TempPass);
                     if (testUser != null)
                     {
+                        
                         Console.WriteLine("Вы успешно вошли!");
                         return TempLogin;
                     }
@@ -219,7 +231,7 @@ namespace Zadachi
         //    using (ApplicationContext context = new ApplicationContext())
         //    {
         //        Random rnd = new Random();
-        //        var testBlog = context.Users.FirstOrDefault(b => b.Name == "http://test.com");
+        //        var testBlog = context.Users.FirstOrDefault(b => b.Name == "");
         //        if (testBlog != null)
         //        {
         //            context.Users.Add(new User { Name = "Test" + rnd.Next(), Password = "" + rnd.Next()} );
